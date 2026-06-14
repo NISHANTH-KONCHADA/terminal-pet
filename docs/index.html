@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terminal Pet 🐾</title>
+    <!-- Modern Sans-Serif Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <!-- Pixel/Retro Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <!-- Monospace Font for Terminal -->
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="background-grid"></div>
+
+    <nav class="navbar">
+        <div class="logo">
+            <span class="pixel-text">Terminal Pet</span>
+        </div>
+        <div class="nav-links">
+            <a href="https://github.com/NISHANTH-KONCHADA/terminal-pet" target="_blank" class="nav-btn github-btn">
+                <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                GitHub
+            </a>
+        </div>
+    </nav>
+
+    <main class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Your Code Has A <span class="highlight-text">New Best Friend</span>.</h1>
+            <p class="hero-subtitle">A virtual pet that lives in your terminal and feeds on your git commits. Keep your commit streak alive to keep your pet happy!</p>
+            <div class="cta-buttons">
+                <a href="https://github.com/NISHANTH-KONCHADA/terminal-pet#install" class="btn primary-btn pixel-btn">Get Started</a>
+                <a href="https://github.com/NISHANTH-KONCHADA/terminal-pet/blob/main/terminal-pet-tutorial.md" class="btn secondary-btn">Read the Tutorial</a>
+            </div>
+        </div>
+
+        <div class="hero-visual">
+            <div class="terminal-window">
+                <div class="terminal-header">
+                    <div class="terminal-buttons">
+                        <span class="close"></span>
+                        <span class="minimize"></span>
+                        <span class="maximize"></span>
+                    </div>
+                    <div class="terminal-title">~/projects/my-app</div>
+                </div>
+                <div class="terminal-body" id="terminal-output">
+                    <!-- Text will be typed here by script.js -->
+                </div>
+            </div>
+            
+            <div class="decoration-coin">🪙</div>
+            <div class="decoration-star">⭐</div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
