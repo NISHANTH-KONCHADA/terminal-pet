@@ -827,3 +827,20 @@ You've got a fully working pet, but here are some directions to make it your own
 You just built a CLI tool, hooked it into git's automation system, and gave it a whole little personality system — all with the Python standard library. The core trick (compute decaying stats from timestamps instead of storing live values) is a pattern you'll see in a lot of places: cooldown timers, "last seen" indicators, rate limiters, and more.
 
 Now go commit some code before Pixel gets hungry. 🐾
+
+---
+
+## Troubleshooting
+
+### 'pet' is not recognized (Windows)
+
+If you run `pet init` or `pet status` after installing and get a `'pet' is not recognized` error, your Python Scripts directory is likely not in your system's `PATH`.
+
+**Quick fix (current terminal only):**
+```powershell
+$env:PATH += ";C:\Users\<username>\AppData\Local\Python\<python-version>\Scripts"
+```
+*(Make sure to replace `<username>` and `<python-version>` with your actual paths).*
+
+**Permanent fix:**
+Add your Python Scripts directory (e.g., `C:\Users\<username>\AppData\Local\Python\pythoncore-3.14-64\Scripts`) to your system's `PATH` environment variable via the Windows Environment Variables settings, then **restart your terminal**.

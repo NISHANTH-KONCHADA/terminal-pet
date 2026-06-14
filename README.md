@@ -56,3 +56,17 @@ pet pet
 | `pet status`  | Show your pet's mood, stats, and stage            |
 | `pet feed`    | Manually feed your pet                            |
 | `pet pet`     | Give your pet some attention (3x/day max)         |
+
+## Troubleshooting
+
+### 'pet' is not recognized (Windows)
+If you run `pet init` or `pet status` and get an error saying the term 'pet' is not recognized, the Python Scripts directory is likely not in your system's PATH.
+
+**To fix this temporarily in your current terminal:**
+```powershell
+$env:PATH += ";C:\Users\konch\AppData\Local\Python\pythoncore-3.14-64\Scripts"
+```
+*(Note: Replace `konch` and the Python version with your own username and Python version if different).*
+
+**To fix this permanently:**
+Add your Python Scripts directory (e.g., `C:\Users\<username>\AppData\Local\Python\pythoncore-3.14-64\Scripts`) to your system's `PATH` environment variable via the Windows Environment Variables settings, then restart your terminal.
