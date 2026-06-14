@@ -41,20 +41,22 @@ def install_hook(start_path="."):
     hooks_dir.mkdir(parents=True, exist_ok=True)
     hook_path = hooks_dir / HOOK_NAME
 
+    # Ensure path is /bin/sh compatible on Windows (replace \ with / and quote it)
+    python_exe = f'"{sys.executable.replace(os.sep, "/")}"'
+
     if hook_path.exists():
         existing = hook_path.read_text()
         if "Terminal Pet" in existing:
             return True, f"Hook already installed at {hook_path}"
         # Don't clobber an existing custom hook -- append instead.
-        appended = existing.rstrip("\n") + "\n" + APPEND_TEMPLATE.format(python=sys.executable)
+        appended = existing.rstrip("\n") + "\n" + APPEND_TEMPLATE.format(python=python_exe)
         hook_path.write_text(appended)
         _make_executable(hook_path)
         return True, f"Appended Terminal Pet hook to existing hook at {hook_path}"
 
-    hook_path.write_text(HOOK_TEMPLATE.format(python=sys.executable))
+    hook_path.write_text(HOOK_TEMPLATE.format(python=python_exe))
     _make_executable(hook_path)
     return True, f"Installed post-commit hook at {hook_path}"
-
 
 def _make_executable(path):
     current = os.stat(path).st_mode
