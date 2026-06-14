@@ -147,6 +147,11 @@ def build_parser():
 
 
 def main():
+    if getattr(sys.stdout, 'encoding', None) is None or sys.stdout.encoding.lower() != 'utf-8':
+        try:
+            sys.stdout.reconfigure(encoding='utf-8')
+        except Exception:
+            pass
     parser = build_parser()
     args = parser.parse_args()
     args.func(args)
