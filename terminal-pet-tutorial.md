@@ -13,7 +13,7 @@ By the end, you'll have:
 
 No external libraries. No background processes. Just Python's standard library and a git hook.
 
-> 💡 **Add a screenshot here**: a terminal window showing `pet status` with your pet's ASCII art and stat bars. This is your hero image!
+![Terminal Pet Hero Image](assets/3rd%20commit.png)
 
 ---
 
@@ -760,7 +760,7 @@ Make your first commit to help it hatch.
 Every time you commit in this repo, your pet will be fed automatically.
 ```
 
-> 💡 **Add a screenshot here** of this output!
+![Pet Init Output](assets/1st%20commit.png)
 
 Check on your egg:
 
@@ -782,7 +782,7 @@ You should see the hook fire automatically:
 🎊 Your egg hatched! Say hello to Pixel the Hatchling!
 ```
 
-> 💡 **Add a screenshot or short screen recording here** — this moment is the payoff!
+![Pet Hatching](assets/2nd%20commit.png)
 
 Run `pet status` again to see your hatchling, full stat bars, and a 1-day streak. Try `pet pet` for a little affection, and try waiting a day (or faking it — see below) to watch hunger decay.
 
