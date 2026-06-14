@@ -64,9 +64,9 @@ If you run `pet init` or `pet status` and get an error saying the term 'pet' is 
 
 **To fix this temporarily in your current terminal:**
 ```powershell
-$env:PATH += ";C:\Users\konch\AppData\Local\Python\pythoncore-3.14-64\Scripts"
+$env:PATH += ";C:\Users\<username>\AppData\Local\Python\<python-version>\Scripts"
 ```
-*(Note: Replace `konch` and the Python version with your own username and Python version if different).*
+*(Note: Replace `<username>` and `<python-version>` with your actual paths).*
 
 **To fix this permanently:**
-Add your Python Scripts directory (e.g., `C:\Users\<username>\AppData\Local\Python\pythoncore-3.14-64\Scripts`) to your system's `PATH` environment variable via the Windows Environment Variables settings, then restart your terminal.
+Add your Python Scripts directory (e.g., `C:\Users\<username>\AppData\Local\Python\<python-version>\Scripts`) to your system's `PATH` environment variable via the Windows Environment Variables settings, then restart your terminal.

@@ -843,4 +843,4 @@ $env:PATH += ";C:\Users\<username>\AppData\Local\Python\<python-version>\Scripts
 *(Make sure to replace `<username>` and `<python-version>` with your actual paths).*
 
 **Permanent fix:**
-Add your Python Scripts directory (e.g., `C:\Users\<username>\AppData\Local\Python\pythoncore-3.14-64\Scripts`) to your system's `PATH` environment variable via the Windows Environment Variables settings, then **restart your terminal**.
+Add your Python Scripts directory (e.g., `C:\Users\<username>\AppData\Local\Python\<python-version>\Scripts`) to your system's `PATH` environment variable via the Windows Environment Variables settings, then **restart your terminal**.
